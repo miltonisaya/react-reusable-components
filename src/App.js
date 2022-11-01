@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <MuiToolBar />
+      <MuiToolBar>LiftPesa</MuiToolBar>
       <Grid
           container
           spacing={2}
