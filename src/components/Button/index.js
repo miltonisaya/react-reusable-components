@@ -11,4 +11,10 @@ function MuiBasicButton(props) {
     );
 }
 
+MuiBasicButton.defaultProps = {
+    variant: "contained",
+    color: "primary",
+    size: "sx"
+}
+
 export default MuiBasicButton;
