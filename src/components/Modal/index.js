@@ -1,5 +1,6 @@
 // ./components/Modal.js
 import React, { useState, useEffect } from "react";
+
 function Modal(props) {
     const [message] = useState(props.message);
     const [show, setShow] = useState(props.show);
