@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 function MuiDataTable(props) {
-    const [rows] = useState(props.rows);
-    const [columns] = useState(props.columns);
-    const [pageSize] = useState(props.pageSize);
-    const [rowsPerPageOptions] = useState(props.rowsPerPageOptions);
-
     return (
         <div style={{ height: 400, width: '100%' }}>
             <DataGrid
-                rows={rows}
-                columns={columns}
-                pageSize={pageSize}
-                rowsPerPageOptions={[rowsPerPageOptions]}
+                {...props}
                 checkboxSelection
             />
         </div>
@@ -22,7 +14,7 @@ function MuiDataTable(props) {
 
 MuiDataTable.defaultProps = {
     pageSize: 10,
-    rowsPerPageOptions: 10
+    rowsPerPageOptions: [5,10,15,20,25,50,100,250,500,1000]
 }
 
 export default MuiDataTable;
