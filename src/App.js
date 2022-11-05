@@ -6,7 +6,7 @@ import MuiToolBar from './components/Toolbar';
 import {Grid} from "@mui/material";
 
 function App() {
-    const showAddDialog = () => {
+    const openDialog = () => {
         console.log("Clicked!!!");
     }
 
@@ -52,7 +52,7 @@ function App() {
                 justifyContent='space-between end'
             >
                 <Grid item xs={12} style={{display: 'flex', justifyContent: 'end', margin: '5px'}}>
-                    <MuiBasicButton onClick={showAddDialog}>
+                    <MuiBasicButton onClick={() => openDialog()}>
                         Add New
                     </MuiBasicButton>
                 </Grid>
