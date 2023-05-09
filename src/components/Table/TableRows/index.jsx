@@ -1,13 +1,23 @@
-const CustomTableHead = () => {
+import Button from "../../Button";
+
+const CustomTableRow = ({columns, row, children}) => {
+    const dynamicRender = (row, column) => {
+        if (column === "actions") {
+            return children(row, column)
+        } else {
+            return row[column.value]
+        }
+    }
     return (
-        <thead>
+        <>
+        <tbody>
         <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
+            {columns.map((col, idx) => <td key={idx}>{dynamicRender(row, col)}</td>)}
         </tr>
-        </thead>);
+        </tbody>
+        </>
+    );
 
 }
 
-export default CustomTableHead;
+export default CustomTableRow;
