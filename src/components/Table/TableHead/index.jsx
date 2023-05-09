@@ -1,12 +1,13 @@
-const CustomTableRow = () => {
+const CustomTableHead = ({columns}) => {
     return (
+        <thead>
         <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
+            {columns.map((col, idx) => (
+                <th key={idx}>{col.title}</th>
+            ))}
         </tr>
-    );
+        </thead>);
 
 }
 
-export default CustomTableRow;
+export default CustomTableHead;
