@@ -3,11 +3,10 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 
-const CustomModal = ({ isOpen, title, children, onClose}) => {
-
+const CustomModal = ({open, title, children, onClose}) => {
     return (
         <div>
-            <Dialog open={true} onClose={onClose}>
+            <Dialog open={open} onClose={onClose}>
                 <DialogTitle>{title}</DialogTitle>
                 <DialogContent>
                     {children}

@@ -1,3 +1,4 @@
+import React from "react";
 import './table.css';
 import CustomTableHead from "./TableHead";
 import CustomTableRow from "./TableRows";
